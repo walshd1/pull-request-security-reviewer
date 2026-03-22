@@ -1,0 +1,19 @@
+name: 'Pull Request Security Reviewer'
+description: 'Provides automated security review suggestions on pull requests, focusing on common vulnerabilities and best practices using AI.'
+author: 'walshd1'
+branding:
+  icon: 'zap'
+  color: 'blue'
+inputs:
+  gemini_api_key:
+    description: 'Gemini API key (free)'
+    required: false
+  service_token:
+    description: 'Service token (paid)'
+    required: false
+outputs:
+  result:
+    description: 'Result'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
